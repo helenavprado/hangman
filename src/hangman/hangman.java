@@ -9,7 +9,7 @@ public class hangman {
     public static void main(String[] args) {
         utils utils = new utils();
         ArrayList<String> wrongLetters = new ArrayList<String>();
-        String[] citiesList = {"Floripa", "Sao paulo", "Rio de janeiro"};
+        String[] citiesList = {"florianopolis", "sao paulo", "rio de janeiro", "brasilia", "belo horizonte", "porto alegre", "bahia"};
         int maxTries = 10;
         int currentTries = 0;
         int index = 0;
@@ -39,7 +39,7 @@ public class hangman {
         System.out.println("Guess a letter:");
         String userInput = letter.nextLine();
         String toLowerCase = userInput.toLowerCase(Locale.ROOT);
-        char letterGuessed = toLowerCase.charAt(0);
+        char letterGuessed = userInput.charAt(0);
 
             index = city.indexOf(letterGuessed);
             if (index > -1) {
